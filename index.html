@@ -53,15 +53,15 @@
                 if (answer.classList.contains('right-ans')) {
                     answer.addEventListener('pointerdown', () => {
                         answers.forEach(el => el.classList.add('revealed'));
+                        answers.forEach(el => el.style.pointerEvents = 'none');
                         answer.classList.add('clicked');
-                        answer.style.pointerEvents = 'none';
                         confetti();
                     });
                 } else {
                     answer.addEventListener('pointerdown', () => {
                         answers.forEach(el => el.classList.add('revealed'));
+                        answers.forEach(el => el.style.pointerEvents = 'none');
                         answer.classList.add('clicked');
-                        answer.style.pointerEvents = 'none';
                     });
                 }
             });
