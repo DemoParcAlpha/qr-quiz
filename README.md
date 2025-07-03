@@ -56,3 +56,15 @@ Voici un exemple concret d'une page de bienvenue
     "image": "https://i.pinimg.com/736x/7a/be/1a/7abe1abf3070503422825065bcf62b47.jpg"
 }
 ```
+
+---
+
+## 📸 3. Comment créer les QR codes ?
+
+C'est très simple. Pour créer le QR code de la question 1 (ID dans le fichier `contenus.json`), on copie le lien correspondant :
+👉 **https://demoparcalpha.github.io/qr-quiz?id=1**
+On change l'**id** avec celui correspondant.
+
+### Création du QR code en ligne
+Il suffit de se rendre sur **https://new.express.adobe.com/tools/generate-qr-code** et insérer le lien. Une fois le lien collé, il faut 'Sauvegarder sous..." l'aperçu du QR code. 
+Une fois téléchargé, plus qu'à scanner !
