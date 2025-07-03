@@ -54,12 +54,14 @@
                     answer.addEventListener('pointerdown', () => {
                         answers.forEach(el => el.classList.add('revealed'));
                         answer.classList.add('clicked');
+                        answer.style.pointerEvents = 'none';
                         confetti();
                     });
                 } else {
                     answer.addEventListener('pointerdown', () => {
                         answers.forEach(el => el.classList.add('revealed'));
                         answer.classList.add('clicked');
+                        answer.style.pointerEvents = 'none';
                     });
                 }
             });
