@@ -4,20 +4,29 @@
     "sub": "Trouve tous les QR codes et réponds aux questions. Bonne chasse !",
     "answers": [],
     "answer": 0,
-    "image": ""
+    "image": "https://i.pinimg.com/736x/7a/be/1a/7abe1abf3070503422825065bcf62b47.jpg"
   },
   "1": {
-    "title": "Que mange Tako le taco ?",
+    "title": "Quelle est la principale source de nourriture du loup gris ?",
     "sub": "Question nourriture",
-    "answers": ["🥔 Potato", "🌮 Taco", "🍬 Haribo"],
+    "answers": [
+      "🍓 Fruits et baies",
+      "🦌 Grands herbivores",
+      "🐟 Poissons"
+    ],
     "answer": 1,
-    "image": "https://img.freepik.com/premium-vector/cute-dancing-wolf-cartoon-character-mascot_207579-56.jpg"
+    "image": "https://i.imgur.com/hVviAl2.jpg"
   },
   "2": {
-    "title": "TEST test 123",
-    "sub": "Question nourriture",
-    "answers": [],
-    "answer": 0,
-    "image": "https://media.tenor.com/ae1Ws-MdyOsAAAAe/wolf-dance.png"
+    "title": "Comment les loups communiquent-ils entre eux ?",
+    "sub": "Question meute",
+    "answers": [
+      "🧠 Télépathie",
+      "📣 Hurlements, postures et odeurs",
+      "👀 Le regard",
+      "🐾 Les pattes"
+    ],
+    "answer": 1,
+    "image": "https://thumbs.dreamstime.com/b/two-cartoon-wolves-having-conversation-one-wolf-blank-speech-bubble-above-its-head-set-against-vibrant-orange-backdrop-358818250.jpg"
   }
 }
