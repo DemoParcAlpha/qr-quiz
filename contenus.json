@@ -1,14 +1,14 @@
 {
   "0": {
     "title": "Bienvenue, on va faire un ptit quiz !",
-    "sub": "Trouve tous les QR codes et réponds aux questions. Bonne chasse !",
+    "subtitle": "Trouve tous les QR codes et réponds aux questions. Bonne chasse !",
     "answers": [],
     "answer": 0,
     "image": "https://i.pinimg.com/736x/7a/be/1a/7abe1abf3070503422825065bcf62b47.jpg"
   },
   "1": {
     "title": "Quelle est la principale source de nourriture du loup gris ?",
-    "sub": "Question nourriture",
+    "subtitle": "Question nourriture",
     "answers": [
       "🍓 Fruits et baies",
       "🦌 Grands herbivores",
@@ -19,7 +19,7 @@
   },
   "2": {
     "title": "Comment les loups communiquent-ils entre eux ?",
-    "sub": "Question meute",
+    "subtitle": "Question meute",
     "answers": [
       "🧠 Télépathie",
       "📣 Hurlements, postures et odeurs",
