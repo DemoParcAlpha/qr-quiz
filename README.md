@@ -59,7 +59,35 @@ Voici un exemple concret d'une page de bienvenue
 
 ---
 
-## 📸 3. Comment créer les QR codes ?
+## ✏️ 3. Comment ajouter une nouvelle question ?
+Même si tu n’as jamais codé, c’est simple ! Suis ces étapes :
+
+### ✅ Étape 1 – Ouvre contenus.json
+- Va dans le dépôt GitHub
+
+- Clique sur le fichier contenus.json
+
+- Clique sur le petit crayon ✏️ en haut à droite (“Edit this file”)
+
+### ✅ Étape 2 – Ajoute une nouvelle question
+Copie-colle l'exemple ci-dessus à la suite des autres questions
+
+- Change les infos (le texte, l'image, les réponses, etc.)
+
+- Incrémente l’id (ex: si la dernière était id: 3, mets id: 4)
+
+⚠️ Attention : les réponses commencent à 0, donc :
+
+`bonne_reponse: 0 = 1ère réponse est la bonne`
+`bonne_reponse: 1 = 2e réponse, etc.`
+
+### ✅ Étape 3 – Enregistre
+- Tout en bas de la page, écris un petit message :
+    👉 Ex: “Ajout de la question 4”
+
+- Clique sur le bouton vert “Commit changes”
+
+## 📸 4. Comment créer les QR codes ?
 
 C'est très simple. Pour créer le QR code de la question 1 (ID dans le fichier `contenus.json`), on copie le lien correspondant :
 👉 **https://demoparcalpha.github.io/qr-quiz?id=1**
