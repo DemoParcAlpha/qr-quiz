@@ -1,0 +1,23 @@
+{
+  "0": {
+    "title": "Bienvenue, on va faire un ptit quiz !",
+    "sub": "Trouve tous les QR codes et réponds aux questions. Bonne chasse !",
+    "answers": [],
+    "answer": 0,
+    "image": ""
+  },
+  "1": {
+    "title": "Que mange Tako le taco ?",
+    "sub": "Question nourriture",
+    "answers": ["🥔 Potato", "🌮 Taco", "🍬 Haribo"],
+    "answer": 1,
+    "image": "https://img.freepik.com/premium-vector/cute-dancing-wolf-cartoon-character-mascot_207579-56.jpg"
+  },
+  "2": {
+    "title": "TEST test 123",
+    "sub": "Question nourriture",
+    "answers": [],
+    "answer": 0,
+    "image": "https://media.tenor.com/ae1Ws-MdyOsAAAAe/wolf-dance.png"
+  }
+}
