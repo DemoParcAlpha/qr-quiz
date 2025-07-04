@@ -37,14 +37,18 @@
     "neutral_comment": "🔍 Trouve un autre QR code pour continuer à apprendre et t'amuser !"
   },
   "2": {
-    "title": "",
-    "subtitle": "",
-    "answers": [],
-    "answer": 2,
+    "title": "Où peut-on trouver les loups blancs dans le monde ?",
+    "subtitle": "Mode Loup",
+    "answers": [
+      "Plus au nord",
+      "Dans le désert d'Arabie",
+      "En Afrique du Sud"
+    ],
+    "answer": 0,
     "image": "",
-    "positive_comment": "",
-    "negative_comment": "",
-    "img_comment": "",
+    "positive_comment": "Les loups blancs se trouvent dans l'hémisphère Nord, autour du cercle polaire.",
+    "negative_comment": "Il n'y a pas de loup dans l'hémisphère Sud, il est donc impossible d'en retrouver en Afrique du Sud.||Le loup d'Arabie est beige/roux puisqu'il vit dans le désert de sable.",
+    "img_comment": "https://res.cloudinary.com/dls6hfhks/image/upload/v1751648502/Capture_d_%C3%A9cran_2025-06-24_222324_iqowo3.jpg",
     "neutral_comment": "🔍 Trouve un autre QR code pour continuer à apprendre et t'amuser !"
   }
 }
