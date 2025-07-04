@@ -198,6 +198,23 @@ main {
     border-radius: 0.75rem;
 }
 
+#image,
+.answer,
+#subtitle,
+#title {
+    animation: turnImage 1.5s linear infinite;
+}
+
+@keyframes turnImage {
+    0% {
+        rotate: 0;
+    }
+
+    100% {
+        rotate: 360deg;
+    }
+}
+
 .comment-card {
     display: none;
     width: calc(100% - 4rem);
@@ -237,6 +254,18 @@ main {
     }
 }
 
+#positive-comment-card {
+    border: 2px solid #70ff7066;
+}
+
+#negative-comment-card {
+    border: 2px solid #ff707066;
+}
+
+#neutral-comment-card {
+    border: 2px solid #70707055;
+}
+
 #positive-comment {
     background-color: #70ff7088;
 }
@@ -246,7 +275,7 @@ main {
 }
 
 #neutral-comment {
-    background-color: #ffffff33;
+    background-color: #70707077;
 }
 
 @media only screen and (max-width:1100px) {
