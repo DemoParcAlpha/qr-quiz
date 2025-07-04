@@ -4,7 +4,7 @@
 <head>
 
     <!-- Live render /!\ DEBUG ONLY /!\ -->
-    <!-- <script type="text/javascript" src="https://livejs.com/live.js"></script> -->
+    <script type="text/javascript" src="https://livejs.com/live.js"></script>
 
     <title>Quiz Parc Alpha</title>
     <link rel="stylesheet" href="./style/css/base.css" />
@@ -29,14 +29,29 @@
     <main>
         <div id="question">
             <div id="title-section">
-                <div id="subtitle"></div>
-                <div id="title">
+                <div id="subtitle" style="white-space: pre-line;"></div>
+                <div id="title" style="white-space: pre-line;">
                 </div>
             </div>
             <div id="image-wrapper">
                 <img id="image" alt="">
             </div>
             <div id="answers">
+            </div>
+            <div id="comment-title">
+                Pourquoi ?
+            </div>
+            <div class="comment-card" id="positive-comment-card">
+                <div class="comment" id="positive-comment" style="white-space: pre-line;"></div>
+            </div>
+            <div class="comment-card" id="negative-comment-card">
+                <div class="comment" id="negative-comment" style="white-space: pre-line;"></div>
+            </div>
+            <div id="image-comment-wrapper">
+                <img id="image-comment" alt="">
+            </div>
+            <div class="comment-card" id="neutral-comment-card">
+                <div class="comment" id="neutral-comment" style="white-space: pre-line;"></div>
             </div>
         </div>
         <div id="qr-error">
@@ -55,13 +70,35 @@
                         answers.forEach(el => el.classList.add('revealed'));
                         answers.forEach(el => el.style.pointerEvents = 'none');
                         answer.classList.add('clicked');
-                        confetti();
+                        document.getElementById('positive-comment-card').classList.add('revealed');
+                        document.getElementById('negative-comment-card').classList.add('revealed');
+                        document.getElementById('image-comment-wrapper').classList.add('revealed');
+                        document.getElementById('neutral-comment-card').classList.add('revealed');
+                        commentTitle = document.getElementById('comment-title');
+                        commentTitle.classList.add('revealed');
+                        setTimeout(() => {
+                            commentTitle.scrollIntoView({ behavior: "smooth" });
+                            setTimeout(() => {
+                                confetti();
+                                confetti();
+                                confetti();
+                            }, 300);
+                        }, 500);
                     });
                 } else {
                     answer.addEventListener('pointerdown', () => {
                         answers.forEach(el => el.classList.add('revealed'));
                         answers.forEach(el => el.style.pointerEvents = 'none');
                         answer.classList.add('clicked');
+                        document.getElementById('positive-comment-card').classList.add('revealed');
+                        document.getElementById('negative-comment-card').classList.add('revealed');
+                        document.getElementById('image-comment-wrapper').classList.add('revealed');
+                        document.getElementById('neutral-comment-card').classList.add('revealed');
+                        commentTitle = document.getElementById('comment-title');
+                        commentTitle.classList.add('revealed');
+                        setTimeout(() => {
+                            commentTitle.scrollIntoView({ behavior: "smooth" });
+                        }, 500);
                     });
                 }
             });
@@ -78,18 +115,46 @@
                 if (contenus[id]) {
                     const entry = contenus[id];
 
-                    document.getElementById('title').textContent = entry.title;
-                    document.getElementById('subtitle').textContent = entry.subtitle;
+                    document.getElementById('title').textContent = entry.title.replace('||', '\n');
+                    document.getElementById('subtitle').textContent = entry.subtitle.replace('||', '\n');
                     const question = document.getElementById('question');
                     const img_wrapper = document.getElementById('image-wrapper');
                     const img = document.getElementById('image');
                     const title_section = document.getElementById('title-section');
+                    const positiveComment = document.getElementById('positive-comment');
+                    const negativeComment = document.getElementById('negative-comment');
+                    const imageComment = document.getElementById('image-comment');
+                    const neutralComment = document.getElementById('neutral-comment');
+                    const positiveCommentCard = document.getElementById('positive-comment-card');
+                    const negativeCommentCard = document.getElementById('negative-comment-card');
+                    const imageCommentWrapper = document.getElementById('image-comment-wrapper');
+                    const neutralCommentCard = document.getElementById('neutral-comment-card');
+                    const commentTitle = document.getElementById('comment-title');
                     if (entry.image && entry.image.trim() !== "") {
                         img.src = entry.image;
                         img_wrapper.style.display = "flex";
                     } else {
                         img_wrapper.style.display = "none";
                         question.classList.add("no-img");
+                    }
+                    if (entry.positive_comment && entry.positive_comment.trim() !== "") {
+                        positiveComment.textContent = entry.positive_comment.replace('||', '\n');
+                        positiveCommentCard.classList.add('ready');
+                        commentTitle.classList.add('ready');
+                    }
+                    if (entry.negative_comment && entry.negative_comment.trim() !== "") {
+                        negativeComment.textContent = entry.negative_comment.replace('||', '\n');
+                        negativeCommentCard.classList.add('ready');
+                        commentTitle.classList.add('ready');
+                    }
+                    if (entry.img_comment && entry.img_comment.trim() !== "") {
+                        imageComment.src = entry.img_comment;
+                        imageCommentWrapper.classList.add('ready');
+                        commentTitle.classList.add('ready');
+                    }
+                    if (entry.neutral_comment && entry.neutral_comment.trim() !== "") {
+                        neutralComment.textContent = entry.neutral_comment.replace('||', '\n');
+                        neutralCommentCard.classList.add('ready');
                     }
                     const list = document.getElementById('answers');
                     if (entry.answers && entry.answers.length !== 0) {
@@ -106,7 +171,14 @@
                         });
                     } else {
                         title_section.style.flexDirection = "column-reverse";
+                        title_section.style.gap = "1.5rem";
                         list.style.display = "none";
+
+                        document.getElementById('positive-comment-card').classList.add('revealed');
+                        document.getElementById('negative-comment-card').classList.add('revealed');
+                        document.getElementById('image-comment-wrapper').classList.add('revealed');
+                        document.getElementById('neutral-comment-card').classList.add('revealed');
+                        document.getElementById('comment-title').classList.add('revealed');
                     }
 
                 } else {
@@ -115,7 +187,9 @@
                 }
             })
             // .catch(err => console.error('Erreur de chargement JSON:', err))
-            .then(initAnswersSys);
+            .then(() => {
+                initAnswersSys();
+            });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </body>

@@ -35,23 +35,6 @@
     --fs-size-800: 3rem;
 }
 
-::-webkit-scrollbar {
-    width: 0.5rem;
-}
-
-::-webkit-scrollbar-track {
-    background-color: var(--theme-shadow-500);
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: var(--theme-primary-500);
-    border-radius: 0.25rem;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: var(--theme-secondary-500);
-}
-
 * {
     margin: 0;
     padding: 0;

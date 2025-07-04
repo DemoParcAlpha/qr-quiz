@@ -19,23 +19,6 @@
     --real-vh: 100vh;
 }
 
-::-webkit-scrollbar {
-    width: 0.5rem;
-}
-
-::-webkit-scrollbar-track {
-    background-color: var(--theme-shadow);
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: var(--theme-primary);
-    border-radius: 0.25rem;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: var(--theme-secondary);
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -46,8 +29,8 @@
 
 html {
     width: 100%;
-    height: 100%;
-    max-height: 100%;
+    min-height: 100%;
+    /* max-height: 100%; */
 }
 
 body {
@@ -56,7 +39,7 @@ body {
     /* background: linear-gradient(to right top, #6d9f71, #a8c9a0) no-repeat; */
     background-size: cover;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,7 +50,7 @@ body {
 main {
     width: 100%;
     max-width: 550px;
-    height: 100%;
+    min-height: 100%;
 }
 
 #question {
@@ -102,15 +85,24 @@ main {
     display: none;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 100vh;
+    margin: auto 0;
 }
 
 #title,
 .error-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
     width: 100%;
     max-lines: 2;
     font-weight: bold;
+}
+
+#comment-title {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 1.25rem;
 }
 
 #subtitle,
@@ -183,12 +175,8 @@ main {
     }
 }
 
-
-
-
-#image-wrapper {
-    flex: 1 1 auto;
-    min-height: 0;
+#image-wrapper,
+#image-comment-wrapper {
     max-height: fit-content;
     max-width: calc(100% - 4rem);
     display: flex;
@@ -200,14 +188,65 @@ main {
     padding: 0.25rem;
 }
 
-#image {
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
+#image,
+#image-comment {
+    /* max-width: 100%; */
+    width: 100%;
     height: auto;
     object-fit: contain;
     display: block;
     border-radius: 0.75rem;
+}
+
+.comment-card {
+    display: none;
+    width: calc(100% - 4rem);
+    border: 2px solid #ffffff44;
+    font-size: 1.25rem;
+    border-radius: 1rem;
+    padding: 0.25rem;
+}
+
+#image-comment-wrapper,
+#comment-title {
+    display: none;
+}
+
+.comment {
+    border-radius: 0.75rem;
+    padding: 0.75rem;
+}
+
+.comment-card.ready.revealed,
+#image-comment-wrapper.ready.revealed,
+#comment-title.ready.revealed {
+    display: block;
+    opacity: 0;
+    animation: revealComment 0.5s ease forwards;
+    animation-delay: 800ms;
+    scroll-behavior: smooth;
+}
+
+@keyframes revealComment {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#positive-comment {
+    background-color: #70ff7088;
+}
+
+#negative-comment {
+    background-color: #ff707088;
+}
+
+#neutral-comment {
+    background-color: #ffffff33;
 }
 
 @media only screen and (max-width:1100px) {
