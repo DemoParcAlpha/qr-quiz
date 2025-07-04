@@ -198,23 +198,6 @@ main {
     border-radius: 0.75rem;
 }
 
-#image,
-.answer,
-#subtitle,
-#title {
-    animation: turnImage 1.5s linear infinite;
-}
-
-@keyframes turnImage {
-    0% {
-        rotate: 0;
-    }
-
-    100% {
-        rotate: 360deg;
-    }
-}
-
 .comment-card {
     display: none;
     width: calc(100% - 4rem);
